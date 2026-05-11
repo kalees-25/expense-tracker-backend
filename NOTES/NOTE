@@ -1,0 +1,45 @@
+# FIX THIS MODALS FOR ROUTES
+
+# FILE                               ROLE
+
+# MAIN.PY                          BOSS(APP CREATE)
+# ROUTES                           WORKERS (ENDPOINTS)
+
+
+
+# SQLALCHEMY  -TALK WITH DB
+# PYMYSQL -> SQLALCHEMY IS NOT DIRECTLY TALK WITH DB,
+#            IT REQUIRES A DRIVER LIKE PYMYSQL TO EXECUTE THE COMMANDS
+
+
+
+
+
+
+
+
+# Important point:
+
+# Python dict la:
+
+# quotes single or double irukkalaam
+# bool = True
+# None = None
+
+# JSON la:
+
+# keys and strings double quotes தான்
+# bool = true
+# null = null
+
+# Example:
+
+# Python dict:
+
+# {"name": "food", "paid": True, "note": None}
+
+# JSON:
+
+# {"name":"food","paid":true,"note":null}
+
+# So dictionary JSON ஆக மாறும்போது formatting and types convert aagum.
