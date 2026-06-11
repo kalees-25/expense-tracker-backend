@@ -100,8 +100,49 @@ def clean_description(cls, value):
     return value
 
 
-#  
-class Config:
-    from_attributes = True 
+# -------------------------------------------------
+# UPDATE SCHEMA
+# -------------------------------------------------
 
-#-----------IN OBJECT ARE ALSO CONVERT IN TO JSON DATA----------------
+class ExpenseUpdate(BaseModel):
+
+    date: date
+
+    category: ExpenseCategory
+
+    description: str = Field(
+        ...,
+        min_length=3,
+        max_length=100,
+        pattern=r"^[a-zA-Z0-9\s,.()-]+$"
+    )
+
+    amount: float = Field(
+        ...,
+        gt=0,
+        lt=1000000
+    )
+
+    user_id: int
+
+
+# -------------------------------------------------
+# RESPONSE SCHEMA
+# -------------------------------------------------
+
+class ExpenseResponse(BaseModel):
+
+    id: int
+
+    date: date
+
+    category: ExpenseCategory
+
+    description: str
+
+    amount: float
+
+    user_id: int
+
+
+    model_config = ConfigDict(from_attributes=True)
