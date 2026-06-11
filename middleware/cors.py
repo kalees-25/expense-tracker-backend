@@ -1,8 +1,6 @@
 from fastapi.middleware.cors import CORSMiddleware
 
 
-
-
 # MIDDELEWARE
 def add_cors(app):
     app.add_middleware(     #REQUEST/RESPONSE  MIDDLE LA  INTERCEPT PANNURA LAYER ADD PANRA
